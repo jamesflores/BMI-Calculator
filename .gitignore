@@ -1,0 +1,6 @@
+db.sqlite3
+backend/__pycache__
+bmi/__pycache__
+staticfiles/*
+venv
+bmi/migrations/__pycache__
