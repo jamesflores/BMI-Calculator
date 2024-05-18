@@ -26,7 +26,13 @@ SECRET_KEY = os.environ.get('BMI_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com', '.jamesf.xyz']
+# Running behind a secure proxy
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = 'https'
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
